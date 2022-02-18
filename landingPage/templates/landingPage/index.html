@@ -1,0 +1,362 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Abi Silk Sarees | Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'landingPage/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'landingPage/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'landingPage/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'landingPage/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'landingPage/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'landingPage/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{% static 'landingPage/css/style.css' %}">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light">
+            <a href="index.html">
+              <img id="logo" src="{% static 'landingPage/images/logo_removebg.png' %}" alt="" class="img-fluid">  
+            <span>Abi Silk Sarees</span>
+            </a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#portfolio">Sarees</a></li>
+            <li><a class="nav-link scrollto" href="#cta">Payment</a></li>
+            <li><a class="nav-link scrollto" href="#why-us">About Us</a></li>
+            <li><a class="nav-link scrollto " href="#team">Team</a></li>
+            <li><a class="getstarted scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle">
+          </i>
+        </nav><!-- .navbar -->
+
+      </div><!-- End Header Container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>Looking for greatly woven Handloom sarees?</h1>
+      <h2 class="btn-get-started scrollto">You are at the right place</h2>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-left">
+          <h2>Our Collections</h2>
+          <p>Gloss over our latest additions. These sell like hotcakes so do not wait. You have been warned.</p>
+        </div>
+
+        <!--<div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>-->
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          {% for saree in saree_list %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                
+                <img src="{% static saree.image_path %}" class="img-fluid" alt="">
+                  <div class="portfolio-info">
+                    <h4>{{ saree.saree_name }}</h4>
+                    <p>{{ saree.description }}</p>
+                    <h4>&#x20B9; {{ saree.cost }}</h4>
+                  </div>
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span>10,000+</span>
+            <p>Customers</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span>Great</span>
+            <p>Reviews</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span>24x7</span>
+            <p>Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span>Timely</span>
+            <p>Delivery</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-right">
+            <div class="content">
+              <h3>Why Choose Abi Silk Sarees for your saree needs?</h3>
+              <p>
+                If you are wondering about our reliability, look no further than your immediate right.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Silk Mark Certified</h4>
+                    <p>The mark certifies that the piece of textile which bears the mark is made of pure natural silk.</p>
+                    <a  href="http://silkmarkindia.com/" class="btn-get-started scrollto">
+                      <button type="button" class="btn btn-light">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-award"></i>
+                    <h4>National Award Winner</h4>
+                    <p>Our sarees are designed by the 2012 National Award Winner for Weaving and our Founder, Gunasekaran</p>
+                    <a  href="https://timesofindia.indiatimes.com/city/coimbatore/sirumugai-celebrates-national-award-to-two-of-its-weavers/articleshow/17094470.cms" class="btn-get-started scrollto">
+                      <button type="button" class="btn btn-light">Learn More</button>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-world"></i>
+                    <h4>Clients from all over the world</h4>
+                    <p>We handle seamless shipping and support to clients all over the world. Word travels super fast.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="text-center" data-aos="zoom-in">
+          <h3>Alright, I have chosen a saree. How do I pay?</h3>
+          <p>Um, we are working on integrating a payment gateway to the site. <br/> For now, we accept all kinds of any Online Payments like Internet Banking, UPI etc</p>
+          <a class="cta-btn" href="payment">Get Payment Details</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+  
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Team</h2>
+              <p>Wanna know who is behind the wheels?</p>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row">
+
+              <div class="col-lg-6">
+                <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="pic"><img src="{% static 'landingPage/images/team/face.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>V Gunasekaran</h4>
+                    <span>Founder</span>
+                    <p>50 years of experience in handloom weaving, experienced designer and a National Award Winner.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mt-4 mt-lg-0">
+                <div class="member" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="pic"><img src="{% static 'landingPage/images/team/face.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Sivaselvi Ranganathan</h4>
+                    <span>Product Manager</span>
+                    <p>50 years of experience in handloom weaving, experienced designer and a National Award Winner.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mt-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="pic"><img src="{% static 'landingPage/images/team/face.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Ranganathan Gunasekaran</h4>
+                    <span>CTO</span>
+                    <p>50 years of experience in handloom weaving, experienced designer and a National Award Winner.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 mt-4">
+                <div class="member" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="pic"><img src="{% static 'landingPage/images/team/face.jpg' %}" class="img-fluid" alt=""></div>
+                  <div class="member-info">
+                    <h4>Abinesh Ranganathan</h4>
+                    <span>Accountant</span>
+                    <p>50 years of experience in handloom weaving, experienced designer and a National Award Winner.</p>
+                    <!--<div class="social">
+                      <a href=""><i class="ri-twitter-fill"></i></a>
+                      <a href=""><i class="ri-facebook-fill"></i></a>
+                      <a href=""><i class="ri-instagram-fill"></i></a>
+                      <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    </div>-->
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="section-title">
+              <h2>Contact</h2>
+              <p>We are on support 24x7.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            
+            <a href="https://www.google.com/maps/place/Abi+Silk+Sarees+(Silk+Sarees+Whole+Sale)/@11.3183597,76.9988266,16z/data=!4m13!1m6!3m5!1s0x3ba8efcee904b151:0xa538730bdb1ff5e8!2sAbi+Silk+Sarees+(Silk+Sarees+Whole+Sale)!8m2!3d11.322352!4d76.9965917!3m5!1s0x3ba8efcee904b151:0xa538730bdb1ff5e8!8m2!3d11.322352!4d76.9965917!15sCidBYmkgU2lsayBTYXJlZXMgKFNpbGsgU2FyZWVzIFdob2xlc2FsZSlaJyIlYWJpIHNpbGsgc2FyZWVzIHNpbGsgc2FyZWVzIHdob2xlc2FsZZIBCnNhcmVlX3Nob3CaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJkalpoV1hWQlJSQUI">
+              <img id="map" style="border:0; width: 100%; height: 270px;" src="{% static 'landingPage/images/map.png' %}"  frameborder="0" allowfullscreen>
+            </a>
+            <div class="info mt-4">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              <p>Abi Silk Sarees, Sowdeshwari Nagar, Moolathurai, Sirumugai, Coimbatore 641302</p>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 mt-4">
+                <div class="info">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>abisilksarees@gmail.com</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="info w-100 mt-4">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+91 8220032832, +91 7373919102</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Abi Silk Sarees</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'landingPage/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'landingPage/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'landingPage/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'landingPage/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'landingPage/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'landingPage/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'landingPage/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'landingPage/js/main.js' %}"></script>
+
+</body>
+
+</html>
