@@ -1,0 +1,7 @@
+Django==2.2.14
+dj-database-url
+django-heroku
+gunicorn
+python-decouple
+whitenoise
+psycopg2
