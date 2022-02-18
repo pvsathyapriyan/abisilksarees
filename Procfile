@@ -1,0 +1,1 @@
+web: gunicorn abisilksarees.wsgi --log-file -
