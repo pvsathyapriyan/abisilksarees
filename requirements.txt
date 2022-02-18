@@ -4,4 +4,4 @@ django-heroku
 gunicorn
 python-decouple
 whitenoise
-psycopg2
+psycopg2==2.8.6
